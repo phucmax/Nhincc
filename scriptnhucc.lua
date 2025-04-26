@@ -481,7 +481,7 @@ local hopsevervipTab= Window:AddTab({
 
 
 hopsevervipTab:AddButton({
-    Title = "script hop full mon",
+    Title = "script hop sever ngon ",
     Description = "nhấn để chạy script",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhTuanDzai-Hub/ScriptHopBoss/refs/heads/main/HopFullMom.lua"))()
