@@ -475,7 +475,7 @@ camlockTab:AddButton({
 })
 
 local hopsevervipTab= Window:AddTab({
-    Title = "hop sever full mon",
+    Title = "hop sever ngon",
     Icon = "server"
 })
 
