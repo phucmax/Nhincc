@@ -1,3 +1,21 @@
+-- Gửi người chạy script về Discord
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local webhookUrl = "https://discord.com/api/webhooks/1366072947059720244/EXQVV59GImlIrepYC4F36vKgQMnfIUd1ZGkXJlDG_CUmOuWKIj6AHDeVpJ4EwvXXKbPc" -- <<< Bước này thay Webhook URL vào đây
+
+local data = {
+    ["content"] = "**[Thông báo Script]**\nTên: " .. LocalPlayer.Name ..
+                  "\nUserID: " .. LocalPlayer.UserId ..
+                  "\nGame: " .. game.PlaceId ..
+                  "\nJobID: " .. game.JobId ..
+                  "\nExecutor: " .. (identifyexecutor and identifyexecutor() or "Không biết")
+}
+
+pcall(function()
+    HttpService:PostAsync(webhookUrl, HttpService:JSONEncode(data))
+end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
