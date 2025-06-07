@@ -51,7 +51,7 @@ end
 
 task.spawn(function()
     while true do
-        wait(0.1) 
+        wait(3) 
         Hop()
     end
 end)
