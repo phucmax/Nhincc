@@ -32,7 +32,7 @@ local function GetServers()
         else
             break
         end
-        wait(0.5)
+        wait(3)
     end
     return Servers
 end
